@@ -13,13 +13,13 @@ REGOLE
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 let sum = 10 + 20;
-console.log("IL VALORE DI SUM è:", sum);
+console.log("A) IL VALORE DI SUM è:", sum);
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 let random = Math.floor(Math.random() * 21);
-console.log("RANDOM GENERA UN NUMERO CASUALE DA 0 A 20:", random);
+console.log("B) RANDOM GENERA UN NUMERO CASUALE DA 0 A 20:", random);
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
@@ -29,48 +29,74 @@ let me = {
   surname: "Perri",
   age: 30,
 };
-console.log("ME:", me);
+console.log("C) ME:", me);
 
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
 delete me.age;
-console.log("PROPRIETà AGE RIMOSSA:", me);
+console.log("D) PROPRIETà AGE RIMOSSA:", me);
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 me.skills = ["JAVA SCRIPT", "HTML", "CSS"];
-console.log("CREATO ARRAY SKILLS, AGGIUNTO A ME:", me);
+console.log("E) CREATO ARRAY SKILLS, AGGIUNTO A ME:", me);
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
+me.skills.push("PROSSIMAMENTE ANCHE ALTRI");
+console.log("F) AGGIUNTO NUOVO ELEMENTO AD ARRAY SKILLS:", me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
+me.skills.pop();
+console.log("G) RIMOSSO ULTIMO ELEMENTO AD ARRAY SKILLS:", me);
 
 // Funzioni
 
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
+const dice = function () {
+  return Math.ceil(Math.random() * 6);
+};
+let uscito = dice();
+console.log("1) FUNZIONE 'DICE', GENERA UN NUMERO CASUALE TRA 1 E 6:", uscito);
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+const whoIsBigger = function (a, b) {
+  if (a > b) {
+    console.log("2) IL NUMERO MAGGIORE TRA I DUE è:", a);
+  } else if (a < b) {
+    console.log("2) IL NUMERO MAGGIORE TRA I DUE è:", b);
+  } else {
+    a === b;
+    console.log("2) I 2 NUMERI SONO UGUALI");
+  }
+};
+whoIsBigger(22, 20);
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
+const splitMe = function (str) {
+  return str.split(" ");
+};
+let arrayDaStr = splitMe("CIAO CHE FAI OGGI DI BELLO");
+console.log("3) DA STRINGA AD ARRAY DI PAROLE:", arrayDaStr);
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+const deleteOne = function () {};
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
