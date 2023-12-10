@@ -442,6 +442,18 @@ const addTest = function () {
   ***
 
 */
+const halfTree = function (altezza) {
+  let albero = " ";
+  for (let i = 1; i <= altezza; i++) {
+    let riga = " ";
+    for (let j = 1; j <= i; j++) {
+      riga += "*";
+    }
+    albero += riga + "\n";
+  }
+  console.log("27) ALBERO DI * ALTO IN BASE AL PARAMETRO INSERITO\n", albero);
+};
+halfTree(3);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -454,10 +466,48 @@ const addTest = function () {
   *****
 
 */
+const tree = function (altezza) {
+  let albero = "";
+  for (let i = 0; i < altezza; i++) {
+    let riga = "";
+    for (let j = 0; j < altezza - i - 1; j++) {
+      riga += " ";
+    }
+    for (let k = 0; k < 2 * i + 1; k++) {
+      riga += "*";
+    }
+    albero += riga + "\n";
+  }
+  console.log("28) ALBERO DI * ALTO IN BASE AL PARAMETRO INSERITO\n", albero);
+};
+
+tree(3);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+const isItPrime = function (numero) {
+  if (numero <= 1) {
+    console.log("29) IL NUMERO FORNITO NON è PRIMO", false);
+  } else {
+    let divisori = 0;
+    for (let i = 2; i < numero; i++) {
+      if (numero % i === 0) {
+        divisori++;
+        break;
+      }
+    }
+    if (divisori === 0) {
+      console.log(
+        "29) IL NUMERO FORNITO COME PARAMETRO è UN NUMERO PRIMO",
+        true
+      );
+    } else {
+      console.log("29) IL NUMERO FORNITO NON è PRIMO", false);
+    }
+  }
+};
+isItPrime(3);
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
