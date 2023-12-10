@@ -361,25 +361,43 @@ const removeIndex = function (indice) {
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 const select = function () {
-  const id = document.getElementById("container");
-  console.log("20) ELEMENTO DOTATO DI ID 'CONTAINER' SELEZIONATO:", id);
+  const idd = document.getElementById("container");
+  console.log("20) ELEMENTO DOTATO DI ID 'CONTAINER' SELEZIONATO:", idd);
 };
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+const selectTd = function () {
+  const tdd = document.getElementsByTagName("td");
+  console.log("21) ELEMENTI DOTATI DI TAG 'TD' SELEZIONATI:", tdd);
+};
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+const printTd = function () {
+  const tddd = document.getElementsByTagName("td");
+  Array.from(tddd).forEach((td) => {
+    console.log("22) TESTO CONTENUTO IN OGNI TD:", td.textContent);
+  });
+};
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+const bgColor = function () {
+  const links = document.getElementsByTagName("a");
+  for (let i = 0; i < links.length; i++) {
+    links[i].style.backgroundColor = "red";
+  }
+  console.log("23) IL BACKGROUND DEI LINK NELLA PAGINA DIVENTA ROSSO:", links);
+};
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+const addLi = function () {};
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
@@ -563,3 +581,12 @@ removeIndex(10);
 
 // 20:
 select();
+
+// 21:
+selectTd();
+
+// 22:
+printTd();
+
+// 23:
+bgColor();
