@@ -397,15 +397,37 @@ const bgColor = function () {
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-const addLi = function () {};
+const addLi = function () {
+  const lista = document.getElementById("myList");
+  const nuovoElem = document.createElement("li");
+  nuovoElem.textContent = "Elemento appena creato ed aggiunto";
+  console.log(
+    "24) NUOVO ELEMENTO AGGIUNTO ALLA LISTA NON ORDINATA:",
+    nuovoElem
+  );
+  lista.appendChild(nuovoElem);
+  // console.log("24) NUOVO ELEMENTO AGGIUNTI ALLA LISTA NON ORDINATA:", lista);
+};
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+const svuota = function () {
+  const togli = document.getElementById("myList");
+  togli.innerHTML = "";
+  console.log("25) SVUOTATA LA LISTA 'myList'");
+};
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+const addTest = function () {
+  const tr = document.getElementsByTagName("tr");
+  for (let i = 0; i < tr.length; i++) {
+    tr[i].classList.add("test");
+  }
+  console, log("26) AGGIUNTA LA CLASSE 'test' AD OGNI TAG TR");
+};
 
 // [EXTRA] JS Avanzato
 
@@ -590,3 +612,12 @@ printTd();
 
 // 23:
 bgColor();
+
+// 24:
+addLi();
+
+// 25:
+svuota();
+
+// 26:
+addTest();
